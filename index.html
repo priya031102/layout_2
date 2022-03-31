@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!-- 
+<div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+ -->
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" height="50"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+          
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tutorials
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Learn</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">HTML</a></li>
+              <li><a class="dropdown-item" href="#">css</a></li>
+              <li><a class="dropdown-item" href="#">Javascript</a></li>
+              <li><a class="dropdown-item" href="#">SQL</a></li>
+              <li><a class="dropdown-item" href="#">PHP</a></li>
+              
+             
+            </ul>
+          </li>
+       
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          References
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">References</a></li>
+          
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">HTML tag reference</a></li>
+          <li><a class="dropdown-item" href="#">css reference</a></li>
+          <li><a class="dropdown-item" href="#">Javascript reference</a></li>
+          <li><a class="dropdown-item" href="#">SQL reference</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Exercises
+        </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Try it out!</a></li>
+        <li><hr class="dropdown-divider"></li> 
+        <li><a class="dropdown-item" href="#">HTML EXERCISES</a></li>
+        <li><a class="dropdown-item" href="#">CSS EXERCISES</a></li>
+        <li><a class="dropdown-item" href="#">Javascript EXERCISES</a></li>
+        <li><a class="dropdown-item" href="#">PHP EXERCISES</a></li>
+        
+      </ul>
+    </li>
+      </ul>
+      
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid mt-3">
+        
+  <div class="row">
+    <div class="col p-3 bg-light"><img src="./img1.png" width="300" height="300"><br><br><br>Get full access to all of the w3 school courses with certifications</div>
+    <div class="col p-3 bg-light"><img src="./img2.png" width="300" height="300"><br><br><br>Start learning Web Application Development with our HTML,CSS,Javascript,SQL and PHP courses</div>
+    <div class="col p-3 bg-light"><img src="./img3.png" width="300" height="300"><br><br><br>Start learning Front end web Development with our HTML,CSS,Javascript and fundamental courses</div>
+    <div class="col p-3 bg-light"><img src="./img4.png" width="300" height="300" width="250"><br><br><br>Start learning Data Analytics with our python, pandas,Numpy,R,SQL and Data science courses</div>
+  </div>
+</div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div align="center" style="background-color: #fcfafa; color: black;">
+<hr>
+<br>
+<p>Course catalog | Term of use | Privacy</p>
+</div>
+
+
+
+  
+
+</body>
+</html>
